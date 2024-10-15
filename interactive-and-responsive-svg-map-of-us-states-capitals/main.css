@@ -1,0 +1,76 @@
+#us-map{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+path:hover, circle:hover {
+  stroke: #002868 !important;
+  stroke-width:2px;
+  stroke-linejoin: round;
+  fill: #002868 !important;
+  cursor: pointer;
+}
+#path67 {
+  fill: none !important;
+  stroke: #A9A9A9 !important;
+  cursor: default;
+}
+#info-box {
+  display: none;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 1;
+  background-color: #ffffff;
+  border: 2px solid #BF0A30;
+  border-radius: 5px;
+  padding: 5px;
+  font-family: arial;
+}
+
+/* Banner Overlay */
+#banner {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    height: 70vh;
+    width: 40vw;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 20px;
+    border: 1px solid #ccc;
+    z-index: 1000;
+    justify-content: flex-start;
+    color: white;
+}
+
+/* Banner Content */
+#banner-content {
+    position: relative;
+}
+
+#banner h2 {
+    margin-top: 0;
+}
+
+/* Close Button */
+#close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: none;
+    border: none;
+    color: white;
+}
+
+#close-btn:hover,
+#close-btn:focus {
+    background: none;
+    border: none;
+    outline: auto;
+    font-family: 'Roboto', sans-serif;
+}
