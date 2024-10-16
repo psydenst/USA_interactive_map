@@ -42,8 +42,8 @@ function displayStateInfo(stateId) {
   const data = stateData[stateId];
   if (data) {
     // Update the banner with the state's data
-    $('#state-name').text(`State: ${data.name}`);
-    $('#state-code').text(`Code: ${data.code}`);
+    $('#state-name').text(`${data.name}`);
+    $('#state-code').text(`${data.code}`);
 
     // Clear previous categories
     $('#state-categories').empty();
@@ -56,11 +56,11 @@ function displayStateInfo(stateId) {
       if (activeCategories.length > 0) {
         activeCategories.forEach(category => {
           // Render only categories with status true
-          const categoryItem = `<li>Category ${category.id}: Active</li>`;
+          const categoryItem = `<li><b>${category.id}</b>: ${category.lawName}</li>`;
           $('#state-categories').append(categoryItem);
         });
       } else {
-        $('#state-categories').append('<li>No active categories available.</li>');
+        $('#state-categories').append('<li>No laws in any of the listed categories</li>');
       }
     } else {
       $('#state-categories').append('<li>No categories available.</li>');
