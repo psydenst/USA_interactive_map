@@ -47,6 +47,7 @@ path:hover, circle:hover {
     z-index: 1000;
     justify-content: flex-start;
     color: white;
+    overflow-y: auto;
 }
 
 /* Banner Content */
@@ -73,6 +74,33 @@ path:hover, circle:hover {
     color: white;
 }
 
+#filter_cat {
+  position: absolute;
+  bottom: 10%;
+  right: 1%;
+  background-color: rgba(0, 0, 0, 0.45);
+  height: 50vh;
+  width: 16vw;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto; /* Add this line to enable vertical scrolling */
+  overflow-x: hidden; /* Add this line to enable vertical scrolling */
+  margin-left: 1vw;
+}
+
+#filter_cat label {
+  font-size: 13px;
+
+}
+#filter_cat input {
+  position: absolute;
+  opacity: 1;
+  cursor: pointer;
+  height: 1.5vh;
+  width: 15px;
+}
+
 #close-btn:hover,
 #close-btn:focus {
     background: none;
@@ -80,3 +108,12 @@ path:hover, circle:hover {
     outline: auto;
     font-family: 'Roboto', sans-serif;
 }
+
+#colors_description {
+  color: white;
+  display: flex;
+  margin-left: 1vw;
+}
+
+
+
