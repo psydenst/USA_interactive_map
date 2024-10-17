@@ -80,6 +80,10 @@ $(document).ready(function() {
     $('#banner').fadeOut(); // Hide the banner with a fade-out effect
   });
 
+
+
+
+
   // Function to log selected categories and update state colors
   function updateSelectedCategories() {
     const selectedCategories = [];
@@ -97,6 +101,9 @@ $(document).ready(function() {
     // Update the state colors based on selected categories
     updateStateColors(selectedCategories);
   }
+
+
+
 
 function createGradient(selectedCategories) {
   // Initialize an empty array to store color components
@@ -130,9 +137,33 @@ function createGradient(selectedCategories) {
 
   // Create a gradient string using a template literal (supports multiple colors)
   const gradientString = `linear-gradient(to right, ${colorComponents.join(', ')})`;
-  console.log(gradientString)
-  // return gradientString;
+
+  console.log(gradientString);
+  // Create a new gradient element
+  const gradientElement = document.getElementById("myGradient");
+
+  // Clear existing stops (optional, if you want to dynamically change colors)
+  while (gradientElement.firstChild) {
+    gradientElement.removeChild(gradientElement.firstChild);
+  }
+
+  // Create new stop elements based on the color components
+  for (let i = 0; i < colorComponents.length; i++) {
+    const stopElement = document.createElementNS("http://www.w3.org/2000/svg", "stop");
+    stopElement.setAttribute("offset", `${(i / (colorComponents.length - 1)) * 100}%`);
+    stopElement.setAttribute("stop-color", colorComponents[i]);
+    gradientElement.appendChild(stopElement);
+  }
+
+  // Append the gradient element to the SVG
+//  document.getElementById("us-map").appendChild(gradientElement);
+
+  return colorComponents;
 }
+
+  
+  // return gradientString;
+
 
   // Function to update state colors based on selected categories
 function updateStateColors(selectedCategories) {
