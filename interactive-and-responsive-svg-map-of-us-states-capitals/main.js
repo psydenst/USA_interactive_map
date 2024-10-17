@@ -98,37 +98,83 @@ $(document).ready(function() {
     updateStateColors(selectedCategories);
   }
 
+function createGradient(selectedCategories) {
+  // Initialize an empty array to store color components
+  const colorComponents = [];
+
+  // Map selected categories to their corresponding color values
+  const categoryColors = {
+    "Privacy and Data Protection": "red",
+    "Transparency, Platform Accountability and Anti-Censorship": "green",
+    "Election Misinformation (Excluding AI)": "yellow",
+    "AI-Generated Election Content": "blue",
+    "AI Regulations (Excluding Elections)": "orange",
+    "Cyberbullying, Defamation, and Harassment": "cyan",
+    "Digital Literacy and Public Education": "purple"
+  };
+
+  // Loop through selected categories
+  for (const category of selectedCategories) {
+    const color = categoryColors[category];
+    if (color) { // Check if category exists in the mapping
+      colorComponents.push(color); // Add the color component to the array
+    } else {
+      console.warn(`Ignoring unknown category: ${category}`); // Handle unknown categories
+    }
+  }
+
+  // If no color components are found, return a default color
+  if (colorComponents.length === 0) {
+    return '#D3D3D3';
+  }
+
+  // Create a gradient string using a template literal (supports multiple colors)
+  const gradientString = `linear-gradient(to right, ${colorComponents.join(', ')})`;
+  console.log(gradientString)
+  // return gradientString;
+}
+
   // Function to update state colors based on selected categories
-  function updateStateColors(selectedCategories) {
-    // Iterate through each state in stateData
-    for (const stateId in stateData) {
-      if (stateData.hasOwnProperty(stateId)) {
-        const stateCategories = stateData[stateId].categories;
-        let stateColor = '#D3D3D3'; // Default color
+function updateStateColors(selectedCategories) {
+  // ... (rest of your code)
 
-        // Find matching categories with status=true
-        const matchingCategories = stateCategories.filter(category => 
-          selectedCategories.includes(category.id) && category.status === true
-        );
+  for (const stateId in stateData) {
+    if (stateData.hasOwnProperty(stateId)) {
+      const stateCategories = stateData[stateId].categories;
+      let stateColor = '#D3D3D3'; // Default color
+      let colorApplied = false; // Flag to track color application
 
-        if (matchingCategories.length > 0) {
-          // If multiple categories match, prioritize based on the order of selectedCategories
-          for (let i = 0; i < selectedCategories.length; i++) {
-            const categoryName = selectedCategories[i];
-            const category = matchingCategories.find(cat => cat.id === categoryName);
-            if (category) {
+      // Find matching categories with status=true
+      const matchingCategories = stateCategories.filter(category =>
+        selectedCategories.includes(category.id) && category.status === true
+      );
+
+      if (matchingCategories.length > 0) {
+        // If multiple categories match, prioritize based on the order of selectedCategories
+        for (let i = 0; i < selectedCategories.length; i++) {
+          const categoryName = selectedCategories[i];
+          const category = matchingCategories.find(cat => cat.id === categoryName);
+          if (category) {
+            if (selectedCategories.length > 1) {
+              const gradientString = createGradient(selectedCategories);
+              $('#' + stateId).css('fill', "url(#myGradient)");
+              colorApplied = true; // Set flag if color is applied
+              break; // Exit the inner loop after applying gradient
+            } else {
               stateColor = categoryColors[categoryName] || '#D3D3D3';
-              break; // Assign the first matching category's color
+              break; // Assign the first matching category's color and exit
             }
           }
         }
+      }
 
-        // Apply the color to the state
+      // Apply the color to the state (only if not applied already)
+      if (!colorApplied) {
         $('#' + stateId).css('fill', stateColor);
       }
     }
   }
-
+}
   // Initial log and color assignment on page load
   updateSelectedCategories();
 
