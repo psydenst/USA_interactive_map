@@ -185,9 +185,9 @@ function updateStateColors(selectedCategories) {
     "Privacy and Data Protection": "red",
     "Transparency, Platform Accountability and Anti-Censorship": "green",
     "Election Misinformation (Excluding AI)": "yellow",
-    "AI-Generated Election Content": "blue",
+    "AI-Generated Election Content": "cyan",
     "AI Regulations (Excluding Elections)": "orange",
-    "Cyberbullying, Defamation, and Harassment": "cyan",
+    "Cyberbullying, Defamation, and Harassment": "blue",
     "Digital Literacy and Public Education": "purple"
   };
 
@@ -230,7 +230,14 @@ function updateStateColors(selectedCategories) {
           }
         }
       }
-
+      if (hasCyber && stateId == "WDC")
+      {
+        $('#DC').css('fill', stateColor);
+      }
+      if (hasCyber == false)
+      {
+        $('#DC').css('fill', "#D3D3D3");
+      }
       // Apply the color to the state (only if not applied already)
       if (!colorApplied) {
         $('#' + stateId).css('fill', stateColor);

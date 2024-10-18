@@ -385,7 +385,7 @@ const stateData = {
             }
         ]
     },
-"DC": {
+"WDC": {
         "name": "District of Columbia",
         "code": "DC",
         "categories": [
