@@ -80,7 +80,7 @@ path:hover, circle:hover {
   right: 1%;
   background-color: rgba(0, 0, 0, 0.45);
   height: 50vh;
-  width: 16vw;
+  width: 20vw;
   color: white;
   display: flex;
   flex-direction: column;
@@ -90,7 +90,7 @@ path:hover, circle:hover {
 }
 
 #filter_cat label {
-  font-size: 13px;
+  font-size: 10px;
 
 }
 #filter_cat input {

@@ -109,16 +109,6 @@ function createGradient(selectedCategories) {
   // Initialize an empty array to store color components
   const colorComponents = [];
 
-  // Map selected categories to their corresponding color values
-  const categoryColors = {
-    "Privacy and Data Protection": "red",
-    "Transparency, Platform Accountability and Anti-Censorship": "green",
-    "Election Misinformation (Excluding AI)": "yellow",
-    "AI-Generated Election Content": "blue",
-    "AI Regulations (Excluding Elections)": "orange",
-    "Cyberbullying, Defamation, and Harassment": "cyan",
-    "Digital Literacy and Public Education": "purple"
-  };
 
   // Loop through selected categories
   for (const category of selectedCategories) {
@@ -161,13 +151,16 @@ function createGradient(selectedCategories) {
   return colorComponents;
 }
 
-// Verify if all categories match to apply the gradient 
-function matchAllCategories(statecategories, colorComponents) {
 
+function matchSomeCategories(selectedCategories, stateCategories, stateId) {
+  const matchingCategories = stateCategories.filter(category =>
+    selectedCategories.includes(category.id) && category.status === true
+  );
+
+  console.log(matchingCategories);
 }
 
-
-function matchCategories(selectedCategories, stateCategories) {
+function matchAllCategories(selectedCategories, stateCategories) {
   // Create a Set to store the categories with status true
   const trueCategoriesSet = new Set();
   for (const category of stateCategories) {
@@ -198,6 +191,8 @@ function updateStateColors(selectedCategories) {
     "Digital Literacy and Public Education": "purple"
   };
 
+  
+  const hasCyber = selectedCategories.includes("Cyberbullying, Defamation, and Harassment");
 
   for (const stateId in stateData) {
     if (stateData.hasOwnProperty(stateId)) {
@@ -219,13 +214,15 @@ function updateStateColors(selectedCategories) {
             if (selectedCategories.length > 1) {
               const colorComponents = createGradient(selectedCategories);
               console.log(selectedCategories);
-              if (matchCategories(selectedCategories, stateData[stateId].categories))
+              matchSomeCategories(selectedCategories, stateData[stateId].categories)
+              if (matchAllCategories(selectedCategories, stateData[stateId].categories))
               {
-                console.log("inside loop");
                 $('#' + stateId).css('fill', "url(#myGradient)");
                 colorApplied = true; // Set flag if color is applied
+                matchSomeCategories(selectedCategories, stateData[stateId].categories, stateId)
                 break; // Exit the inner loop after applying gradient
-              }
+               }
+              
             } else {
               stateColor = categoryColors[categoryName] || '#D3D3D3';
               break; // Assign the first matching category's color and exit
