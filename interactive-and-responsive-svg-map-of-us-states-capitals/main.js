@@ -161,13 +161,43 @@ function createGradient(selectedCategories) {
   return colorComponents;
 }
 
-  
-  // return gradientString;
+// Verify if all categories match to apply the gradient 
+function matchAllCategories(statecategories, colorComponents) {
 
+}
+
+
+function matchCategories(selectedCategories, stateCategories) {
+  // Create a Set to store the categories with status true
+  const trueCategoriesSet = new Set();
+  for (const category of stateCategories) {
+    if (category.status) {
+      trueCategoriesSet.add(category.id);
+    }
+  }
+
+  // Check if all selectedCategories are in the trueCategoriesSet
+  for (const selectedCategory of selectedCategories) {
+    if (!trueCategoriesSet.has(selectedCategory)) {
+      return false; // At least one selectedCategory doesn't have status true
+    }
+  }
+
+  return true; // All selectedCategories have status true
+}
 
   // Function to update state colors based on selected categories
 function updateStateColors(selectedCategories) {
-  // ... (rest of your code)
+    const categoryColors = {
+    "Privacy and Data Protection": "red",
+    "Transparency, Platform Accountability and Anti-Censorship": "green",
+    "Election Misinformation (Excluding AI)": "yellow",
+    "AI-Generated Election Content": "blue",
+    "AI Regulations (Excluding Elections)": "orange",
+    "Cyberbullying, Defamation, and Harassment": "cyan",
+    "Digital Literacy and Public Education": "purple"
+  };
+
 
   for (const stateId in stateData) {
     if (stateData.hasOwnProperty(stateId)) {
@@ -187,10 +217,15 @@ function updateStateColors(selectedCategories) {
           const category = matchingCategories.find(cat => cat.id === categoryName);
           if (category) {
             if (selectedCategories.length > 1) {
-              const gradientString = createGradient(selectedCategories);
-              $('#' + stateId).css('fill', "url(#myGradient)");
-              colorApplied = true; // Set flag if color is applied
-              break; // Exit the inner loop after applying gradient
+              const colorComponents = createGradient(selectedCategories);
+              console.log(selectedCategories);
+              if (matchCategories(selectedCategories, stateData[stateId].categories))
+              {
+                console.log("inside loop");
+                $('#' + stateId).css('fill', "url(#myGradient)");
+                colorApplied = true; // Set flag if color is applied
+                break; // Exit the inner loop after applying gradient
+              }
             } else {
               stateColor = categoryColors[categoryName] || '#D3D3D3';
               break; // Assign the first matching category's color and exit
