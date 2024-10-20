@@ -1,3 +1,4 @@
+
 #us-map{
   display: block;
   position: absolute;
@@ -80,7 +81,7 @@ path:hover, circle:hover {
   right: 1%;
   background-color: rgba(0, 0, 0, 0.45);
   height: 50vh;
-  width: 20vw;
+  width: 35vw;
   color: white;
   display: flex;
   flex-direction: column;
@@ -90,15 +91,18 @@ path:hover, circle:hover {
 }
 
 #filter_cat label {
-  font-size: 10px;
+  font-size: 1.2vw;
+  text-align: center;
+  white-space: normal;
+  word-wrap: break-word;
 
 }
 #filter_cat input {
-  position: absolute;
+  position: relative;
   opacity: 1;
   cursor: pointer;
   height: 1.5vh;
-  width: 15px;
+  width: 1.2vw;
 }
 
 #close-btn:hover,
@@ -114,6 +118,5 @@ path:hover, circle:hover {
   display: flex;
   margin-left: 1vw;
 }
-
 
 

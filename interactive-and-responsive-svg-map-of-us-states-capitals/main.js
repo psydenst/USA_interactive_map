@@ -89,14 +89,16 @@ $(document).ready(function() {
     const selectedCategories = [];
 
     // Iterate over each checked checkbox within the filter_cat fieldset
-    $('#filter_cat input[type=checkbox]:checked').each(function() {
+    $('#filter_cat input[type=radio]:checked').each(function() {
       // Retrieve the text of the corresponding label
       const categoryName = $(this).next('label').text().trim();
+      
       selectedCategories.push(categoryName);
     });
 
+    // Deselect all other checkboxes
+
     // Log the selected categories to the console
-    console.log('Selected Categories:', selectedCategories);
 
     // Update the state colors based on selected categories
     updateStateColors(selectedCategories);
@@ -128,7 +130,6 @@ function createGradient(selectedCategories) {
   // Create a gradient string using a template literal (supports multiple colors)
   const gradientString = `linear-gradient(to right, ${colorComponents.join(', ')})`;
 
-  console.log(gradientString);
   // Create a new gradient element
   const gradientElement = document.getElementById("myGradient");
 
@@ -157,7 +158,6 @@ function matchSomeCategories(selectedCategories, stateCategories, stateId) {
     selectedCategories.includes(category.id) && category.status === true
   );
 
-  console.log(matchingCategories);
 }
 
 function matchAllCategories(selectedCategories, stateCategories) {
@@ -180,7 +180,7 @@ function matchAllCategories(selectedCategories, stateCategories) {
 }
 
   // Function to update state colors based on selected categories
-function updateStateColors(selectedCategories) {
+  function updateStateColors(selectedCategories) {
     const categoryColors = {
     "Privacy and Data Protection": "red",
     "Transparency, Platform Accountability and Anti-Censorship": "green",
@@ -191,65 +191,37 @@ function updateStateColors(selectedCategories) {
     "Digital Literacy and Public Education": "purple"
   };
 
-  
-  const hasCyber = selectedCategories.includes("Cyberbullying, Defamation, and Harassment");
+    const hasCyber = selectedCategories.includes("Cyberbullying, Defamation, and Harassment");
 
-  for (const stateId in stateData) {
-    if (stateData.hasOwnProperty(stateId)) {
-      const stateCategories = stateData[stateId].categories;
-      let stateColor = '#D3D3D3'; // Default color
-      let colorApplied = false; // Flag to track color application
+    for (const stateId in stateData) {
+      if (stateData.hasOwnProperty(stateId)) {
+        const stateCategories = stateData[stateId].categories;
+        let stateColor = '#D3D3D3'; // Default color
 
-      // Find matching categories with status=true
-      const matchingCategories = stateCategories.filter(category =>
-        selectedCategories.includes(category.id) && category.status === true
-      );
+        // Find matching category with status=true based on the last selected category
+        const matchingCategory = stateCategories.find(category =>
+          category.id === selectedCategories[selectedCategories.length - 1] && category.status === true
+        );
 
-      if (matchingCategories.length > 0) {
-        // If multiple categories match, prioritize based on the order of selectedCategories
-        for (let i = 0; i < selectedCategories.length; i++) {
-          const categoryName = selectedCategories[i];
-          const category = matchingCategories.find(cat => cat.id === categoryName);
-          if (category) {
-            if (selectedCategories.length > 1) {
-              const colorComponents = createGradient(selectedCategories);
-              console.log(selectedCategories);
-              matchSomeCategories(selectedCategories, stateData[stateId].categories)
-              if (matchAllCategories(selectedCategories, stateData[stateId].categories))
-              {
-                $('#' + stateId).css('fill', "url(#myGradient)");
-                colorApplied = true; // Set flag if color is applied
-                matchSomeCategories(selectedCategories, stateData[stateId].categories, stateId)
-                break; // Exit the inner loop after applying gradient
-               }
-              
-            } else {
-              stateColor = categoryColors[categoryName] || '#D3D3D3';
-              break; // Assign the first matching category's color and exit
-            }
-          }
+        if (matchingCategory) {
+          stateColor = categoryColors[matchingCategory.id] || '#D3D3D3';
         }
-      }
-      if (hasCyber && stateId == "WDC")
-      {
-        $('#DC').css('fill', stateColor);
-      }
-      if (hasCyber == false)
-      {
-        $('#DC').css('fill', "#D3D3D3");
-      }
-      // Apply the color to the state (only if not applied already)
-      if (!colorApplied) {
+
+        if (hasCyber && stateId == "WDC") {
+          $('#DC').css('fill', stateColor);
+        } else if (!hasCyber) {
+          $('#DC').css('fill', "#D3D3D3");
+        }
+
         $('#' + stateId).css('fill', stateColor);
       }
     }
   }
-}
   // Initial log and color assignment on page load
   updateSelectedCategories();
 
   // Event listener for checkbox state changes
-  $('#filter_cat input[type=checkbox]').on('change', function() {
+  $('#filter_cat input[type=radio]').on('click', function() {
     updateSelectedCategories();
   });
 });
