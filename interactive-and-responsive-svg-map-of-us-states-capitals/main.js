@@ -146,76 +146,64 @@ function createGradient(selectedCategories) {
     gradientElement.appendChild(stopElement);
   }
 
-  // Append the gradient element to the SVG
-//  document.getElementById("us-map").appendChild(gradientElement);
-
   return colorComponents;
 }
 
+// Define your custom function
+function selectAllCategories() {
+  // Implement your desired logic for handling "All categories" selection here
+  console.log("Hello from all");
+  // all states go to defautl color
+  $('.state').css('fill', '#D3D3D3'); // Applies to all elements with class "state"
+  $('#filter_cat input[type="radio"]').prop('checked', false);
 
-function matchSomeCategories(selectedCategories, stateCategories, stateId) {
-  const matchingCategories = stateCategories.filter(category =>
-    selectedCategories.includes(category.id) && category.status === true
-  );
-
-}
-
-function matchAllCategories(selectedCategories, stateCategories) {
-  // Create a Set to store the categories with status true
-  const trueCategoriesSet = new Set();
-  for (const category of stateCategories) {
-    if (category.status) {
-      trueCategoriesSet.add(category.id);
-    }
-  }
-
-  // Check if all selectedCategories are in the trueCategoriesSet
-  for (const selectedCategory of selectedCategories) {
-    if (!trueCategoriesSet.has(selectedCategory)) {
-      return false; // At least one selectedCategory doesn't have status true
-    }
-  }
-
-  return true; // All selectedCategories have status true
+  $('#8').prop('checked', true);
+  //
+  $('#FL').css('fill', 'red');
+  return ;
 }
 
   // Function to update state colors based on selected categories
   function updateStateColors(selectedCategories) {
     const categoryColors = {
-    "Privacy and Data Protection": "red",
-    "Transparency, Platform Accountability and Anti-Censorship": "green",
-    "Election Misinformation (Excluding AI)": "yellow",
-    "AI-Generated Election Content": "cyan",
-    "AI Regulations (Excluding Elections)": "orange",
-    "Cyberbullying, Defamation, and Harassment": "blue",
-    "Digital Literacy and Public Education": "purple"
-  };
+      "Privacy and Data Protection": "#800000", // Darker red
+      "Transparency, Platform Accountability and Anti-Censorship": "#006400", // Darker green
+      "Election Misinformation (Excluding AI)": "#808000", // Darker yellow
+      "AI-Generated Election Content": "#008080", // Darker cyan
+      "AI Regulations (Excluding Elections)": "#FF8C00", // Darker orange
+      "Cyberbullying, Defamation, and Harassment": "#000080", // Darker blue
+      "Digital Literacy and Public Education": "#800080" // Darker purple
+    };
 
-    const hasCyber = selectedCategories.includes("Cyberbullying, Defamation, and Harassment");
-
-    for (const stateId in stateData) {
-      if (stateData.hasOwnProperty(stateId)) {
-        const stateCategories = stateData[stateId].categories;
-        let stateColor = '#D3D3D3'; // Default color
-
-        // Find matching category with status=true based on the last selected category
-        const matchingCategory = stateCategories.find(category =>
-          category.id === selectedCategories[selectedCategories.length - 1] && category.status === true
-        );
-
-        if (matchingCategory) {
-          stateColor = categoryColors[matchingCategory.id] || '#D3D3D3';
-        }
-
-        if (hasCyber && stateId == "WDC") {
-          $('#DC').css('fill', stateColor);
-        } else if (!hasCyber) {
-          $('#DC').css('fill', "#D3D3D3");
-        }
-
-        $('#' + stateId).css('fill', stateColor);
-      }
+    if (selectedCategories == "All categories") {
+      selectAllCategories();
+      return ;
     }
+    const hasCyber = selectedCategories.includes("Cyberbullying, Defamation, and Harassment");
+    
+      for (const stateId in stateData) {
+        if (stateData.hasOwnProperty(stateId)) {
+          const stateCategories = stateData[stateId].categories;
+          let stateColor = '#D3D3D3'; // Default color
+
+          // Find matching category with status=true based on the last selected category
+          const matchingCategory = stateCategories.find(category =>
+            category.id === selectedCategories[selectedCategories.length - 1] && category.status === true
+          );
+
+          if (matchingCategory) {
+            stateColor = categoryColors[matchingCategory.id] || '#D3D3D3';
+          }
+
+          if (hasCyber && stateId == "WDC") {
+            $('#DC').css('fill', stateColor);
+          } else if (!hasCyber) {
+            $('#DC').css('fill', "#D3D3D3");
+          }
+          console.log("Debug: am I here?")
+          $('#' + stateId).css('fill', stateColor);
+        }
+      }
   }
   // Initial log and color assignment on page load
   updateSelectedCategories();
