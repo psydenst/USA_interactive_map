@@ -163,7 +163,33 @@ path:hover, circle:hover {
 .minimized-container button {
   background: none;
   border: none;
-  outline: none;
   color: white;
-  cursor: pointer;
+}
+
+.minimized-container button:hover,
+.minimized-container button:focus {
+  background: none;
+  border: none; /* Add white border on hover and focus */
+  outline: none; /* Remove default browser outline */
+  text-align: flex-end;
+  font-family: 'Roboto', sans-serif;
+}
+
+
+#filter_cat label::after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 5px;
+}
+
+#filter_cat label:nth-child(1)::after {
+  background-color: #FF0000; /* Red */
+}
+
+.color-square {
+
+  width: 20px;
+  height: 20px;
 }

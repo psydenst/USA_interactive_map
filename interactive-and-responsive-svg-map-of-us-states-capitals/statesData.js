@@ -2452,4 +2452,3 @@ const stateData = {
 };
 
 
-// Export the data if using ES6 modules

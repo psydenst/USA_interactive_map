@@ -176,6 +176,9 @@ function selectAllCategories() {
   $('#UT').css('fill', 'url(#UT_gradient)'); // Apply the gradient
   $('#VT').css('fill', 'url(#VT_gradient)'); // Apply the gradient
   $('#VA').css('fill', 'url(#VA_gradient)'); // Apply the gradient
+  $('#WA').css('fill', 'url(#WA_gradient)'); // Apply the gradient
+  $('#WV').css('fill', 'url(#WV_gradient)'); // Apply the gradient
+  $('#WI').css('fill', 'url(#WI_gradient)'); // Apply the gradient
   return ;
 }
 
