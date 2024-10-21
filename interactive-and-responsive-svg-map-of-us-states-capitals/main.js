@@ -85,8 +85,8 @@ $(document).ready(function() {
       "Transparency, Platform Accountability and Anti-Censorship": "#006400", // Darker green
       "Election Misinformation (Excluding AI)": "#808000", // Darker yellow
       "AI-Generated Election Content": "#008080", // Darker cyan
-      "AI Regulations (Excluding Elections)": "#000000", // Darker orange
-      "Cyberbullying, Defamation, and Harassment": "#000080", // Darker blue
+      "AI Regulations (Excluding Elections)": "#000000", // Black
+      "Cyberbullying, Defamation, and Harassment": "#ADD8E6", // Darker blue
       "Digital Literacy and Public Education": "#800080" // Darker purple
     };
 
@@ -131,7 +131,7 @@ function selectAllCategories() {
   $('#CO').css('fill', 'url(#CO_gradient)'); // Apply the gradient
   $('#CT').css('fill', 'url(#CT_gradient)'); // Apply the gradient
   $('#DE').css('fill', 'url(#DE_gradient)'); // Apply the gradient
-  $('#DC').css('fill', '#000080');
+  $('#DC').css('fill', '#ADD8E6');
   $('#FL').css('fill', 'url(#FL_gradient)'); // Apply the gradient
   $('#GA').css('fill', 'url(#GA_gradient)'); // Apply the gradient
   $('#HI').css('fill', 'url(#HI_gradient)'); // Apply the gradient

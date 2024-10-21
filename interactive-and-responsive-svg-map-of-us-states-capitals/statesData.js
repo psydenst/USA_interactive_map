@@ -1142,7 +1142,7 @@ const stateData = {
 {
                 // Cyberbullying, Defamation, and Harassment
                 "id": "Cyberbullying, Defamation, and Harassment",
-                "status": true,
+                "status": false,
                 "lawName": "No"
             },
 {
@@ -1334,7 +1334,7 @@ const stateData = {
 {
                 // Cyberbullying, Defamation, and Harassment
                 "id": "Cyberbullying, Defamation, and Harassment",
-                "status": true,
+                "status": false,
                 "lawName": "No"
             },
 {
@@ -1430,7 +1430,7 @@ const stateData = {
 {
                 // Cyberbullying, Defamation, and Harassment
                 "id": "Cyberbullying, Defamation, and Harassment",
-                "status": true,
+                "status": false,
                 "lawName": "No"
             },
 {
@@ -1526,7 +1526,7 @@ const stateData = {
 {
                 // Cyberbullying, Defamation, and Harassment
                 "id": "Cyberbullying, Defamation, and Harassment",
-                "status": true,
+                "status": false,
                 "lawName": "No"
             },
 {
