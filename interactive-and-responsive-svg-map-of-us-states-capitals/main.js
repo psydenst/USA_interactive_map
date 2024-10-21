@@ -114,15 +114,9 @@ $(document).ready(function() {
 
 
 
-
-function createGradient(selectedCategories) {
-  console.log("Hello from gradient");
-}
-
 // Define your custom function
 function selectAllCategories() {
   // Implement your desired logic for handling "All categories" selection here
-  console.log("Hello from all");
   // all states go to defautl color
   $('.state').css('fill', '#D3D3D3'); // Applies to all elements with class "state"
   $('#filter_cat input[type="radio"]').prop('checked', false);
@@ -224,7 +218,6 @@ function selectAllCategories() {
           } else if (!hasCyber) {
             $('#DC').css('fill', "#D3D3D3");
           }
-          console.log("Debug: am I here?")
           $('#' + stateId).css('fill', stateColor);
         }
       }

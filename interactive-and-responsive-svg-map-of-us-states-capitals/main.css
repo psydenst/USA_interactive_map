@@ -12,7 +12,7 @@ path:hover, circle:hover {
   stroke: #002868 !important;
   stroke-width:2px;
   stroke-linejoin: round;
-  fill: #002868 !important;
+  fill: rgba(136, 136, 136, 0.8) !important;
   cursor: pointer;
 }
 #path67 {
@@ -192,4 +192,8 @@ path:hover, circle:hover {
 
   width: 20px;
   height: 20px;
+}
+
+.cat_title {
+  font-size: 2vw; !important;
 }

@@ -590,12 +590,12 @@
     <fieldset class="d-flex justify-content-between" id="filter_cat">
 
       <div>
-        <button id="close-btn-ctg"><b>X</b></button>
-        <legend class="text-center">Categories</legend>
+        <button id="close-btn-ctg" style="font-size: 1.2vw;"><b>X</b></button>
+        <legend class="text-center" style="font-size: 1.7vw; margin-top: 1vh;">Categories</legend>
       </div>
       <div class="w-100 d-flex categorie">
         <input class="ml-1" type="radio" name="filter_category" id="0" value="0"/>
-        <label class="w-100 d-flex justify-content-center" for="1">None</label>
+        <label class="w-100 d-flex justify-content-center" for="0">None</label>
       </div>
       <div class="w-100 d-flex categorie">
         <input class="ml-1" type="radio" name="filter_category" id="1" value="1"/>
@@ -656,7 +656,10 @@
 
       minimizedContainer.classList.add("minimized-container");
       minimizedContainer.textContent = "Categories";
-
+      minimizedContainer.style.fontSize = "1.4vw"; // Set font size to 2vw
+ 
+      minimizedContainer.style.marginLeft = "0.2vw";
+      minimizedContainer.style.borderRadius = "0.5vw";
       const expandButton = document.createElement("button");
       expandButton.textContent = "^";
       expandButton.addEventListener("click", function() {
