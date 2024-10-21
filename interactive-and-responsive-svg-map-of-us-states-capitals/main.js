@@ -85,7 +85,7 @@ $(document).ready(function() {
       "Transparency, Platform Accountability and Anti-Censorship": "#006400", // Darker green
       "Election Misinformation (Excluding AI)": "#808000", // Darker yellow
       "AI-Generated Election Content": "#008080", // Darker cyan
-      "AI Regulations (Excluding Elections)": "#FF8C00", // Darker orange
+      "AI Regulations (Excluding Elections)": "#000000", // Darker orange
       "Cyberbullying, Defamation, and Harassment": "#000080", // Darker blue
       "Digital Literacy and Public Education": "#800080" // Darker purple
     };
@@ -149,9 +149,49 @@ function selectAllCategories() {
   $('#KY').css('fill', 'url(#KY_gradient)'); // Apply the gradient
   $('#LA').css('fill', 'url(#LA_gradient)'); // Apply the gradient
   $('#ME').css('fill', '#D3D3D3'); // Apply the gradient
+  $('#MD').css('fill', 'url(#MD_gradient)'); // Apply the gradient
+  $('#MA').css('fill', 'url(#MA_gradient)'); // Apply the gradient
+  $('#MI').css('fill', 'url(#MI_gradient)'); // Apply the gradient
+  $('#MN').css('fill', 'url(#MN_gradient)'); // Apply the gradient
+  $('#MS').css('fill', 'url(#MS_gradient)'); // Apply the gradient
+  $('#MO').css('fill', 'url(#MO_gradient)'); // Apply the gradient
+  $('#MT').css('fill', 'url(#MT_gradient)'); // Apply the gradient
+  $('#NE').css('fill', 'url(#NE_gradient)'); // Apply the gradient
+  $('#NV').css('fill', 'url(#NV_gradient)'); // Apply the gradient
+  $('#NH').css('fill', 'url(#NH_gradient)'); // Apply the gradient
+  $('#NJ').css('fill', 'url(#NJ_gradient)'); // Apply the gradient
+  $('#NM').css('fill', 'url(#NM_gradient)'); // Apply the gradient
+  $('#NY').css('fill', 'url(#NY_gradient)'); // Apply the gradient
+  $('#NC').css('fill', 'url(#NC_gradient)'); // Apply the gradient
+  $('#ND').css('fill', 'url(#ND_gradient)'); // Apply the gradient
+  $('#OH').css('fill', 'url(#OH_gradient)'); // Apply the gradient
+  $('#OK').css('fill', 'url(#OK_gradient)'); // Apply the gradient
+  $('#OR').css('fill', 'url(#OR_gradient)'); // Apply the gradient
+  $('#PA').css('fill', 'url(#PA_gradient)'); // Apply the gradient
+  $('#RI').css('fill', 'url(#RI_gradient)'); // Apply the gradient
+  $('#SC').css('fill', 'url(#SC_gradient)'); // Apply the gradient
+  $('#SD').css('fill', 'url(#SD_gradient)'); // Apply the gradient
+  $('#TN').css('fill', 'url(#TN_gradient)'); // Apply the gradient
+  $('#TX').css('fill', 'url(#TX_gradient)'); // Apply the gradient
+  $('#UT').css('fill', 'url(#UT_gradient)'); // Apply the gradient
+  $('#VT').css('fill', 'url(#VT_gradient)'); // Apply the gradient
+  $('#VA').css('fill', 'url(#VA_gradient)'); // Apply the gradient
   return ;
 }
 
+
+  // Função para esconder o fieldset
+  function closeFieldset() {
+    document.getElementById('filter_cat').style.display = 'none';
+  }
+
+  // Função para mostrar o fieldset novamente
+  function openFieldset() {
+    document.getElementById('filter_cat').style.display = 'flex';
+  }
+
+  // Adicionar o evento de clique ao botão de fechar
+  document.getElementById('close-btn-ctg').addEventListener('click', closeFieldset);
   // Function to update state colors based on selected categories
   function updateStateColors(selectedCategories) {
 
