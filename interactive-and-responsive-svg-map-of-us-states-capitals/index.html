@@ -643,19 +643,23 @@
       </div>
   </div>
   <script>
-    document.getElementById("close-btn-ctg").addEventListener("click", function() {
+    document.getElementById("close-btn-ctg").addEventListener("click", function () {
       const filterCatContainer = document.getElementById("filter_cat");
       const minimizedContainer = document.createElement("div");
 
+      // Add a class for easier styling
       minimizedContainer.classList.add("minimized-container");
+
+      // Set the button text with font size and margin using CSS-in-JS or a CSS class
       minimizedContainer.textContent = "Categories";
       minimizedContainer.style.fontSize = "1.4vw"; // Set font size to 2vw
- 
       minimizedContainer.style.marginLeft = "0.2vw";
       minimizedContainer.style.borderRadius = "0.5vw";
+
       const expandButton = document.createElement("button");
-      expandButton.textContent = "^";
-      expandButton.addEventListener("click", function() {
+      expandButton.textContent = "^"; // Keep the text caret for old-school feel
+
+      expandButton.addEventListener("click", function () {
         minimizedContainer.style.display = "none";
         filterCatContainer.classList.remove("hidden");
       });
