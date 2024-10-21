@@ -38,7 +38,7 @@ path:hover, circle:hover {
     display: none; /* Hidden by default */
     position: fixed;
     top: 50%;
-    left: 50%;
+    left: 45%;
     height: 50vh;
     width: 30vw;
     transform: translate(-50%, -50%);
@@ -49,6 +49,10 @@ path:hover, circle:hover {
     justify-content: flex-start;
     color: white;
     overflow-y: auto;
+}
+
+#banner h2 {
+  font-size: 2vw;
 }
 
 /* Banner Content */
@@ -97,6 +101,7 @@ path:hover, circle:hover {
   word-wrap: break-word;
 
 }
+
 #filter_cat input {
   position: relative;
   opacity: 1;

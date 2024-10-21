@@ -80,7 +80,15 @@ $(document).ready(function() {
     $('#banner').fadeOut(); // Hide the banner with a fade-out effect
   });
 
-
+    const categoryColors = {
+      "Privacy and Data Protection": "#800000", // Darker red
+      "Transparency, Platform Accountability and Anti-Censorship": "#006400", // Darker green
+      "Election Misinformation (Excluding AI)": "#808000", // Darker yellow
+      "AI-Generated Election Content": "#008080", // Darker cyan
+      "AI Regulations (Excluding Elections)": "#FF8C00", // Darker orange
+      "Cyberbullying, Defamation, and Harassment": "#000080", // Darker blue
+      "Digital Literacy and Public Education": "#800080" // Darker purple
+    };
 
 
 
@@ -108,45 +116,7 @@ $(document).ready(function() {
 
 
 function createGradient(selectedCategories) {
-  // Initialize an empty array to store color components
-  const colorComponents = [];
-
-
-  // Loop through selected categories
-  for (const category of selectedCategories) {
-    const color = categoryColors[category];
-    if (color) { // Check if category exists in the mapping
-      colorComponents.push(color); // Add the color component to the array
-    } else {
-      console.warn(`Ignoring unknown category: ${category}`); // Handle unknown categories
-    }
-  }
-
-  // If no color components are found, return a default color
-  if (colorComponents.length === 0) {
-    return '#D3D3D3';
-  }
-
-  // Create a gradient string using a template literal (supports multiple colors)
-  const gradientString = `linear-gradient(to right, ${colorComponents.join(', ')})`;
-
-  // Create a new gradient element
-  const gradientElement = document.getElementById("myGradient");
-
-  // Clear existing stops (optional, if you want to dynamically change colors)
-  while (gradientElement.firstChild) {
-    gradientElement.removeChild(gradientElement.firstChild);
-  }
-
-  // Create new stop elements based on the color components
-  for (let i = 0; i < colorComponents.length; i++) {
-    const stopElement = document.createElementNS("http://www.w3.org/2000/svg", "stop");
-    stopElement.setAttribute("offset", `${(i / (colorComponents.length - 1)) * 100}%`);
-    stopElement.setAttribute("stop-color", colorComponents[i]);
-    gradientElement.appendChild(stopElement);
-  }
-
-  return colorComponents;
+  console.log("Hello from gradient");
 }
 
 // Define your custom function
@@ -158,22 +128,33 @@ function selectAllCategories() {
   $('#filter_cat input[type="radio"]').prop('checked', false);
 
   $('#8').prop('checked', true);
-  //
-  $('#FL').css('fill', 'red');
+
+  $('#AL').css('fill', 'url(#AL_gradient)'); // Apply the gradient  
+  $('#AK').css('fill', 'url(#AK_gradient)'); // Apply the gradient
+  $('#AZ').css('fill', 'url(#AZ_gradient)'); // Apply the gradient
+  $('#AR').css('fill', 'url(#AR_gradient)'); // Apply the gradient
+  $('#CA').css('fill', 'url(#CA_gradient)'); // Apply the gradient
+  $('#CO').css('fill', 'url(#CO_gradient)'); // Apply the gradient
+  $('#CT').css('fill', 'url(#CT_gradient)'); // Apply the gradient
+  $('#DE').css('fill', 'url(#DE_gradient)'); // Apply the gradient
+  $('#DC').css('fill', '#000080');
+  $('#FL').css('fill', 'url(#FL_gradient)'); // Apply the gradient
+  $('#GA').css('fill', 'url(#GA_gradient)'); // Apply the gradient
+  $('#HI').css('fill', 'url(#HI_gradient)'); // Apply the gradient
+  $('#ID').css('fill', 'url(#ID_gradient)'); // Apply the gradient
+  $('#IL').css('fill', 'url(#IL_gradient)'); // Apply the gradient
+  $('#IN').css('fill', 'url(#IN_gradient)'); // Apply the gradient
+  $('#IA').css('fill', 'url(#IA_gradient)'); // Apply the gradient
+  $('#KS').css('fill', 'url(#KS_gradient)'); // Apply the gradient
+  $('#KY').css('fill', 'url(#KY_gradient)'); // Apply the gradient
+  $('#LA').css('fill', 'url(#LA_gradient)'); // Apply the gradient
+  $('#ME').css('fill', '#D3D3D3'); // Apply the gradient
   return ;
 }
 
   // Function to update state colors based on selected categories
   function updateStateColors(selectedCategories) {
-    const categoryColors = {
-      "Privacy and Data Protection": "#800000", // Darker red
-      "Transparency, Platform Accountability and Anti-Censorship": "#006400", // Darker green
-      "Election Misinformation (Excluding AI)": "#808000", // Darker yellow
-      "AI-Generated Election Content": "#008080", // Darker cyan
-      "AI Regulations (Excluding Elections)": "#FF8C00", // Darker orange
-      "Cyberbullying, Defamation, and Harassment": "#000080", // Darker blue
-      "Digital Literacy and Public Education": "#800080" // Darker purple
-    };
+
 
     if (selectedCategories == "All categories") {
       selectAllCategories();
