@@ -193,7 +193,7 @@ function selectAllCategories() {
   function updateStateColors(selectedCategories) {
 
 
-    if (selectedCategories == "All categories") {
+    if (selectedCategories == "All Categories") {
       selectAllCategories();
       return ;
     }

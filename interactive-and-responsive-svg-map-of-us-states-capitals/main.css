@@ -110,8 +110,8 @@ path:hover, circle:hover {
   position: relative;
   opacity: 1;
   cursor: pointer;
-  height: 1.5vh;
-  width: 1.2vw;
+  height: 2.5vh;
+  width: 1.8vw;
 }
 
 #close-btn:hover,
@@ -155,7 +155,7 @@ path:hover, circle:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 10vw;
+  width: 13vw;
   height: 3vh;
   cursor: pointer;
 }
