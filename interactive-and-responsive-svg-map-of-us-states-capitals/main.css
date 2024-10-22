@@ -173,36 +173,55 @@ path:hover, circle:hover {
   background-color: rgba(0, 0, 0, 0.45);
   color: white;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 13vw;
-  height: 3vh;
+  flex-direction: column; /* Stack elements vertically */
+  align-items: center; /* Align items to the start horizontally */
+  justify-content: center; /* Center items vertically within the container */
+  width: 12vw;
+  height: 8.5vh;
   cursor: pointer;
+  border-radius: 0.5vw;
+  padding: 0.5vw;
 }
 
-.minimized-container button {
+.minimized-container .expand-button {
   background: none;
   border: none;
-  color: white;
+  padding: 0;
+  cursor: pointer;
+  align-self: flex-end; /* Align the button to the end (right) */
 }
 
-.minimized-container button:hover,
-.minimized-container button:focus {
+.minimized-container .expand-button img {
+  width: auto;
+  width: auto;
+  filter: invert(1); /* Make the image white */
+  margin-bottom: 0.2vh;
+  flex: 0 0 2.5vh; /* Fixed height for the button (image) */
+}
+
+.minimized-container .minimized-text {
+  text-align: center; /* Center the text */
+  width: 100%; /* Ensure the text takes full width */
+  justify-content: center; !important;
+  height: 100%;
+  font-size: 1vw; /* Adjust font size if needed */
+  font-weight: bold; /* Ensure the text is bold */
+  margin-right: 1vw;
+  flex: 1; /* Take up remaining space */
+  margin-top: 0.3vh; /* Optional: space between image and text */
+
+}
+
+/* Hover and Focus Styles for the Button */
+.minimized-container .expand-button:hover,
+.minimized-container .expand-button:focus {
   background: none;
-  border: none; /* Add white border on hover and focus */
-  outline: none; /* Remove default browser outline */
-  text-align: flex-end;
-  font-family: 'Roboto', sans-serif;
+  border: none; /* Remove border on hover and focus */
+  color: white;
+  outline: auto;
 }
 
 
-#filter_cat label::after {
-  content: "";
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  margin-left: 5px;
-}
 
 #filter_cat label:nth-child(1)::after {
   background-color: #FF0000; /* Red */
@@ -218,25 +237,4 @@ path:hover, circle:hover {
   font-size: 2vw; !important;
 }
 
-/* CSS */
-.button-12 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 6px 14px;
-  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
-  border-radius: 6px;
-  border: none;
 
-  background: #6E6D70;
-  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), inset 0px 0.5px 0.5px rgba(255, 255, 255, 0.5), 0px 0px 0px 0.5px rgba(0, 0, 0, 0.12);
-  color: #DFDEDF;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-}
-
-.button-12:focus {
-  box-shadow: inset 0px 0.8px 0px -0.25px rgba(255, 255, 255, 0.2), 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
-  outline: 0;
-}

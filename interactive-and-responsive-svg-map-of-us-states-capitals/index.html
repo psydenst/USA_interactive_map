@@ -657,33 +657,50 @@
       // Add a class for easier styling
       minimizedContainer.classList.add("minimized-container");
 
-      // Set the button text with font size and margin using CSS-in-JS or a CSS class
-      minimizedContainer.textContent = "Law Categories";
-      minimizedContainer.style.fontSize = "1.4vw"; // Set font size to 2vw
-      minimizedContainer.style.marginLeft = "0.2vw";
-      minimizedContainer.style.borderRadius = "0.5vw";
-
+      // Set CSS properties for minimizedContainer
+      // (Most styling is handled via CSS classes)
+      
+      // Create the expand button
       const expandButton = document.createElement("button");
-      expandButton.textContent = "^"; // Keep the text caret for old-school feel
+      expandButton.classList.add("expand-button"); // Optional: add a class for additional styling
 
+      // Create an img element to use inside the button
+      const expandButtonImage = document.createElement("img");
+      expandButtonImage.src = "expand.png"; // Replace with the actual path to your image
+      expandButtonImage.alt = "Expand"; // Set an alt text for accessibility
+      expandButtonImage.style.width = "1vw"; // Adjust the size of the image
+      expandButtonImage.style.filter = "invert(1)"; // Make the image white
+
+      // Append the image element to the button
+      expandButton.appendChild(expandButtonImage);
+
+      // Add event listener to expand the container when clicking the image/button
       expandButton.addEventListener("click", function () {
         minimizedContainer.style.display = "none";
         filterCatContainer.classList.remove("hidden");
       });
 
+      // Append the button first to place it above the text
       minimizedContainer.appendChild(expandButton);
 
+      // Create a div for the text to allow better styling
+      const textContent = document.createElement("div");
+      textContent.innerHTML = "<b>Law Categories</b>"; // Bold text
+      textContent.classList.add("minimized-text"); // Add a class for styling
+
+      // Append the text below the button
+      minimizedContainer.appendChild(textContent);
+
+      // Hide the filter container and insert the minimized container
       filterCatContainer.classList.add("hidden");
       filterCatContainer.parentNode.insertBefore(minimizedContainer, filterCatContainer);
     });
-
   </script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="colors.js"></script>
   <script src="statesData.js"></script>
   <script src="main.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
-
 </body>
 </html>
 
