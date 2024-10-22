@@ -114,12 +114,32 @@ path:hover, circle:hover {
   width: 1.8vw;
 }
 
+.categorie label {
+  cursor: pointer;
+  overflow-y: hidden;
+  text-overflow: ellipsis; /* Add ellipsis for truncated text */
+}
+
+.categorie input[type="radio"]:checked + label {
+  text-decoration: underline;
+}
+
 #close-btn:hover,
 #close-btn:focus {
     background: none;
     border: none;
     outline: auto;
     font-family: 'Roboto', sans-serif;
+}
+
+.underline {
+  text-decoration: underline;  /* Underline the text */
+  cursor: pointer;              /* Set cursor to pointer on hover */
+}
+
+.underline.selected {  /* Style for the selected category */
+  font-weight: bold;        /* Make the text bold */
+  /* Add additional styles for highlighting if needed */
 }
 
 #colors_description {

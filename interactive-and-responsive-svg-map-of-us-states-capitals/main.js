@@ -81,6 +81,7 @@ $(document).ready(function() {
   });
 
     const categoryColors = {
+      "States with No Laws" : "#352f44",
       "Privacy and Data Protection": "#800000", // Darker red
       "Transparency, Platform Accountability and Anti-Censorship": "#006400", // Darker green
       "Election Misinformation (Excluding AI)": "#808000", // Darker yellow
@@ -178,6 +179,13 @@ function selectAllCategories() {
   return ;
 }
 
+function selectNoCategories() {
+  $('.state').css('fill', '#D3D3D3'); // Applies to all elements with class "state"
+  $('#ME').css('fill', 'url(#ME_gradient)'); // Apply the gradient
+  $('#WY').css('fill', 'url(#WY_gradient)'); // Apply the gradient
+  }
+
+
 
   // Função para esconder o fieldset
   function closeFieldset() {
@@ -199,6 +207,11 @@ function selectAllCategories() {
       selectAllCategories();
       return ;
     }
+    if (selectedCategories == "States with No Laws") {
+      selectNoCategories();
+      return ;
+    }
+
     const hasCyber = selectedCategories.includes("Cyberbullying, Defamation, and Harassment");
     
       for (const stateId in stateData) {
@@ -231,4 +244,14 @@ function selectAllCategories() {
   $('#filter_cat input[type=radio]').on('click', function() {
     updateSelectedCategories();
   });
+
+  document.querySelector('label[for="0"]').addEventListener('click', function() {
+    noLaws();
+  });
+
+  function noLaws() {
+    $('#ME').css('fill', 'url(#ME_gradient)'); // Apply the gradient
+    $('#WY').css('fill', 'url(#WY_gradient)'); // Apply the gradient
+  }
+
 });

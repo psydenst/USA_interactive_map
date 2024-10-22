@@ -3,6 +3,9 @@
 <head>
   <link rel="stylesheet" type="text/css" href="main.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+
 </head>
 
 <body>
@@ -589,46 +592,47 @@
         <legend class="text-center" style="font-size: 1.7vw; margin-top: 1vh;">Law Categories for MDM Regulation</legend>
       </div>
       <div class="w-100 d-flex categorie">
-        <input class="ml-1" type="radio" name="filter_category" id="0" value="0"/>
-        <label class="w-100 d-flex justify-content-center" for="0">State with no No Laws</label>
+        <input class="ml-1 d-none" type="radio" name="filter_category" id="0" value="0"/>
+        <label class="w-100 d-flex justify-content-center" for="0">States with No Laws</label>
+        <span class="d-flex justify-content-end color-square mr-3 mt-1" style="background-color: #352f44;"></span>
       </div>
       <div class="w-100 d-flex categorie">
-        <input class="ml-1" type="radio" name="filter_category" id="1" value="1"/>
+        <input class="ml-1 d-none" type="radio" name="filter_category" id="1" value="1"/>
         <label class="w-100 d-flex justify-content-center" for="1">Privacy and Data Protection</label>
         <span class="d-flex justify-content-end color-square mr-3 mt-1" style="background-color: #800000;"></span>
       </div>
-      <div class="w-100 d-flex">
-        <input class="ml-1" type="radio" name="filter_category" id="2" value="2"/>
-        <label class="w-100 d-flex justify-content-center"  for="2">Transparency, Platform Accountability and Anti-Censorship</label>
+      <div class="w-100 d-flex categorie">
+        <input class="ml-1 d-none" type="radio" name="filter_category" id="2" value="2"/>
+          <label class="w-100 d-flex justify-content-center"  for="2">Transparency, Platform Accountability and Anti-Censorship</label>
         <span class="d-flex justify-content-end color-square mr-3 mt-1" style="background-color: #006400"></span>
       </div>
-      <div class="w-100 d-flex" >
-        <input class="ml-1" type="radio" name="filter_category" id="3" value="3" />
+      <div class="w-100 d-flex categorie" >
+        <input class="ml-1 d-none" type="radio" name="filter_category" id="3" value="3" />
         <label class="w-100 d-flex justify-content-center"  for="3">Election Misinformation (Excluding AI)</label>
         <span class="d-flex justify-content-end color-square mr-3 mt-1" style="background-color: #808000"></span>
       </div>
-      <div class="w-100 d-flex" >
-        <input class="ml-1" type="radio" name="filter_category" id="4" value="4" />
+      <div class="w-100 d-flex categorie" >
+        <input class="ml-1 d-none" type="radio" name="filter_category" id="4" value="4" />
         <label class="w-100 d-flex justify-content-center" for="4">AI-Generated Election Content</label>
         <span class="d-flex justify-content-end color-square mr-3 mt-1" style="background-color: #008080"></span>
       </div>
-      <div class="w-100 d-flex" >
-        <input class="ml-1" type="radio" name="filter_category" id="5" value="5" />
+      <div class="w-100 d-flex categorie" >
+        <input class="ml-1 d-none" type="radio" name="filter_category" id="5" value="5" />
         <label class="w-100 d-flex justify-content-center" for="5">AI Regulations (Excluding Elections)</label>
         <span class="d-flex justify-content-end color-square mr-3 mt-1" style="background-color: #876464"></span>
       </div>
-      <div class="w-100 d-flex" >
-        <input class="ml-1" type="radio" name="filter_category" id="6" value="6" />
+      <div class="w-100 d-flex categorie" >
+        <input class="ml-1 d-none" type="radio" name="filter_category" id="6" value="6" />
         <label class="w-100 d-flex justify-content-center" for="6">Cyberbullying, Defamation, and Harassment</label>
-        <span class="d-flex justify-content-end color-square mr-3 mt-1" style="background-color: #ADD8E6""></span>
+        <span class="d-flex justify-content-end color-square mr-3 mt-1" style="background-color: #38598b"></span>
       </div>
-      <div class="w-100 d-flex" >
-        <input class="ml-1" type="radio" name="filter_category" id="7" value="7" />
+      <div class="w-100 d-flex categorie" >
+        <input class="ml-1 d-none" type="radio" name="filter_category" id="7" value="7" />
         <label class="w-100 d-flex justify-content-center" for="7">Digital Literacy and Public Education</label>
         <span class="d-flex justify-content-end color-square mr-3 mt-1" style="background-color: #800080"></span>
       </div>
-      <div class="w-100 d-flex" >
-        <input class="ml-1" type="radio" name="filter_category" id="8" value="8" />
+      <div class="w-100 d-flex categorie">
+        <input class="ml-1 d-none"  type="radio" name="filter_category" id="8" value="8" />
         <label class="w-100 d-flex justify-content-center" for="8">All Categories</label>
       </div>
 
@@ -644,6 +648,7 @@
           </ul>
       </div>
   </div>
+
   <script>
     document.getElementById("close-btn-ctg").addEventListener("click", function () {
       const filterCatContainer = document.getElementById("filter_cat");
@@ -671,6 +676,7 @@
       filterCatContainer.classList.add("hidden");
       filterCatContainer.parentNode.insertBefore(minimizedContainer, filterCatContainer);
     });
+
   </script>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="colors.js"></script>
