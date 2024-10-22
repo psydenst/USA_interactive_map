@@ -85,8 +85,8 @@ $(document).ready(function() {
       "Transparency, Platform Accountability and Anti-Censorship": "#006400", // Darker green
       "Election Misinformation (Excluding AI)": "#808000", // Darker yellow
       "AI-Generated Election Content": "#008080", // Darker cyan
-      "AI Regulations (Excluding Elections)": "#000000", // Black
-      "Cyberbullying, Defamation, and Harassment": "#ADD8E6", // Darker blue
+      "AI Regulations (Excluding Elections)": "#876464" , // Black
+      "Cyberbullying, Defamation, and Harassment": "#38598b", // Darker blue
       "Digital Literacy and Public Education": "#800080" // Darker purple
     };
 
@@ -131,7 +131,7 @@ function selectAllCategories() {
   $('#CO').css('fill', 'url(#CO_gradient)'); // Apply the gradient
   $('#CT').css('fill', 'url(#CT_gradient)'); // Apply the gradient
   $('#DE').css('fill', 'url(#DE_gradient)'); // Apply the gradient
-  $('#DC').css('fill', '#ADD8E6');
+  $('#DC').css('fill', '#38598b');
   $('#FL').css('fill', 'url(#FL_gradient)'); // Apply the gradient
   $('#GA').css('fill', 'url(#GA_gradient)'); // Apply the gradient
   $('#HI').css('fill', 'url(#HI_gradient)'); // Apply the gradient
@@ -145,6 +145,7 @@ function selectAllCategories() {
   $('#ME').css('fill', '#D3D3D3'); // Apply the gradient
   $('#MD').css('fill', 'url(#MD_gradient)'); // Apply the gradient
   $('#MA').css('fill', 'url(#MA_gradient)'); // Apply the gradient
+  $('#ME').css('fill', 'url(#ME_gradient)'); // Apply the gradient
   $('#MI').css('fill', 'url(#MI_gradient)'); // Apply the gradient
   $('#MN').css('fill', 'url(#MN_gradient)'); // Apply the gradient
   $('#MS').css('fill', 'url(#MS_gradient)'); // Apply the gradient
@@ -173,6 +174,7 @@ function selectAllCategories() {
   $('#WA').css('fill', 'url(#WA_gradient)'); // Apply the gradient
   $('#WV').css('fill', 'url(#WV_gradient)'); // Apply the gradient
   $('#WI').css('fill', 'url(#WI_gradient)'); // Apply the gradient
+  $('#WY').css('fill', 'url(#WY_gradient)'); // Apply the gradient
   return ;
 }
 
