@@ -105,7 +105,7 @@ $(document).ready(function() {
       selectedCategories.push(categoryName);
     });
 
-    // Deselect all other checkboxes
+     // Deselect all other checkboxes
 
     // Log the selected categories to the console
 
@@ -242,6 +242,25 @@ function selectNoCategories() {
 
   // Event listener for checkbox state changes
   $('#filter_cat input[type=radio]').on('click', function() {
+
+  const selectedRadio = $('#filter_cat input[type=radio]:checked');
+
+  // Check if any radio button is selected
+  if (selectedRadio.length > 0) {
+    // Retrieve the text of the corresponding label
+    const categoryName = selectedRadio.next('label').text().trim();
+
+    // Update the banner text and display it
+    $('#category-banner').text(`Selected: ${categoryName}`).fadeIn();
+
+    // Proceed with your map coloration logic here
+    // For example:
+    // colorMapBasedOnCategory(selectedRadio.val());
+  } else {
+    // Hide the banner if no category is selected
+    $('#category-banner').fadeOut();
+  }
+    // add here the banner function call
     updateSelectedCategories();
   });
 

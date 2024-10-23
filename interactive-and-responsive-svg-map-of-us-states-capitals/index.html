@@ -591,9 +591,6 @@
         <button id="close-btn-ctg" style="font-size: 1.2vw;"><b>X</b></button>
         <legend class="text-center" style="font-size: 1.7vw; margin-top: 1vh;">Law Categories for MDM Regulation</legend>
       </div>
-      <div>
-        <legend class="text-center" style="font-size: 1.3vw;"><b>Interactive Maps</b></legend>
-      </div>
       <div class="w-100 d-flex categorie">
         <input class="ml-1 d-none" type="radio" name="filter_category" id="0" value="0"/>
         <label class="w-100 d-flex justify-content-center" for="0">States with No Laws</label>
@@ -635,12 +632,17 @@
         <span class="d-flex justify-content-end color-square mr-3 mt-1" style="background-color: #ec729c"></span>
       </div>
       <div class="w-100 d-flex categorie">
-        <input class="ml-1 d-none"  type="radio" name="filter_category" id="8" value="8" />
+        <input class="ml-1 d-none"  type="radio" name="filter_category" id="8" value="8" checked />
         <label class="w-100 d-flex justify-content-center" for="8">All Categories</label>
+        <span class="d-flex justify-content-end color-square mr-3 mt-1" style="background-color: rgba(0,0,0,0);"></span>
       </div>
-      <div>
-        <legend class="text-center" style="font-size: 1.3vw;"><b>Static Maps</b></legend>
+      <div class="w-100 d-flex categorie">
+        <input class="ml-1 d-none"  type="radio" name="filter_category" id="9" value="9" />
+        <label class="w-100 d-flex justify-content-center" for="9">Intensity of Legislations</label>
+        <span class="d-flex justify-content-end color-square mr-3 mt-1" style="background-color: #927fbf;"></span>
       </div>
+
+
     </fieldset>
 
   <div id="banner">
@@ -652,6 +654,11 @@
             <text ></text>
           </ul>
       </div>
+  </div>
+
+  <!-- top rigth banner -->
+  <div id="category-banner" style="position: fixed; top: 10px; right: 10px; background-color: rgba(0, 0, 0, 0.4); color: white; padding: 5px 10px; border-radius: 5px; font-size: 1.2vw;">
+
   </div>
 
   <script>

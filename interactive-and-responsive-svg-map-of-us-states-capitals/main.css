@@ -233,6 +233,7 @@ path:hover, circle:hover {
   border: none;
   padding: 0;
   cursor: pointer;
+  outline: none;
   align-self: flex-end; /* Align the button to the end (right) */
 }
 
@@ -252,4 +253,6 @@ path:hover, circle:hover {
   font-size: 2vw; !important;
 }
 
-
+#category-banner {
+  display: none;
+}
