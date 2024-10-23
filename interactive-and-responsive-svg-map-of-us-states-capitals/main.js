@@ -88,7 +88,7 @@ $(document).ready(function() {
       "AI-Generated Election Content": "#008080", // Darker cyan
       "AI Regulations (Excluding Elections)": "#876464" , // Black
       "Cyberbullying, Defamation, and Harassment": "#38598b", // Darker blue
-      "Digital Literacy and Public Education": "#800080" // Darker purple
+      "Digital Literacy and Public Education": "#ec729c" // Darker purple
     };
 
 

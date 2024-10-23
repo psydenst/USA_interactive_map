@@ -12,7 +12,7 @@ path:hover, circle:hover {
   stroke: #002868 !important;
   stroke-width:2px;
   stroke-linejoin: round;
-  fill: rgba(136, 136, 136, 0.8) !important;
+  fill: rgba(97, 88, 88, 1) !important;
   cursor: pointer;
 }
 #path67 {
@@ -84,7 +84,7 @@ path:hover, circle:hover {
   bottom: 10%;
   right: 1%;
   background-color: rgba(0, 0, 0, 0.45);
-  height: 50vh;
+  height: 60vh;
   width: 35vw;
   color: white;
   display: flex;
@@ -122,6 +122,11 @@ path:hover, circle:hover {
 
 .categorie input[type="radio"]:checked + label {
   text-decoration: underline;
+  font-weight: bold;        /* Makes the text bold */
+  font-size: 1.2em;         /* Increases the font size */
+  padding: 5px;             /* Adds some padding around the label */
+  border-radius: 5px;       /* Rounds the corners for a nicer look */
+  transition: all 0.3s ease; /* Adds a smooth transition effect */
 }
 
 #close-btn:hover,
@@ -168,9 +173,8 @@ path:hover, circle:hover {
 
 .minimized-container {
   position: absolute;
-  bottom: 10%;
+  bottom: 8%;
   right: 1%;
-  background-color: rgba(0, 0, 0, 0.45);
   color: white;
   display: flex;
   flex-direction: column; /* Stack elements vertically */
@@ -178,6 +182,8 @@ path:hover, circle:hover {
   justify-content: center; /* Center items vertically within the container */
   width: 12vw;
   height: 8.5vh;
+  max-height: 55px;
+  max-width: auto;
   cursor: pointer;
   border-radius: 0.5vw;
   padding: 0.5vw;
@@ -193,10 +199,9 @@ path:hover, circle:hover {
 
 .minimized-container .expand-button img {
   width: auto;
-  width: auto;
   filter: invert(1); /* Make the image white */
   margin-bottom: 0.2vh;
-  flex: 0 0 2.5vh; /* Fixed height for the button (image) */
+  flex: 0 0 1.5vh; /* Fixed height for the button (image) */
 }
 
 .minimized-container .minimized-text {
@@ -219,6 +224,16 @@ path:hover, circle:hover {
   border: none; /* Remove border on hover and focus */
   color: white;
   outline: auto;
+}
+
+.menu-button {
+  height: 3vh;
+  width: 3vw;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  align-self: flex-end; /* Align the button to the end (right) */
 }
 
 
