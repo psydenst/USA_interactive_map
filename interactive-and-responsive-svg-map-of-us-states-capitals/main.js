@@ -81,7 +81,7 @@ $(document).ready(function() {
   });
 
     const categoryColors = {
-      "States with No Laws" : "#352f44",
+      "States with No Laws" : "#E6CCFF",
       "Privacy and Data Protection": "#800000", // Darker red
       "Transparency, Platform Accountability and Anti-Censorship": "#006400", // Darker green
       "Election Misinformation (Excluding AI)": "#808000", // Darker yellow
@@ -90,8 +90,6 @@ $(document).ready(function() {
       "Cyberbullying, Defamation, and Harassment": "#38598b", // Darker blue
       "Digital Literacy and Public Education": "#ec729c" // Darker purple
     };
-
-
 
   // Function to log selected categories and update state colors
   function updateSelectedCategories() {
@@ -197,9 +195,69 @@ function selectNoCategories() {
     document.getElementById('filter_cat').style.display = 'flex';
   }
 
+function intensityOfLegislation() {
+
+  const colorMapping = {
+    0: '#E6CCFF', // Lightest purple
+    1: '#CC99FF',
+    2: '#B266FF',
+    3: '#9933FF',
+    4: '#8000FF',
+    5: '#6600CC',
+    6: '#4D0099',
+    7: '#330066' 
+  };
+
+  const stateCategoryCounts = {};
+  let maxCategoryCount = 0;
+
+  // Step 1: Iterate over each state in stateData
+  for (const stateId in stateData) {
+    if (stateData.hasOwnProperty(stateId)) {
+      const state = stateData[stateId];
+      const categories = state.categories;
+
+      // Step 2: Count the number of categories where status === true
+      const activeCategories = categories.filter(category => category.status === true);
+      const categoryCount = activeCategories.length;
+
+      // Store the count in the stateCategoryCounts object
+      stateCategoryCounts[stateId] = categoryCount;
+
+      // Keep track of the maximum category count (if needed)
+      if (categoryCount > maxCategoryCount) {
+        maxCategoryCount = categoryCount;
+      }
+
+      // Get the corresponding color from the colorMapping
+      // Ensure the category count doesn't exceed 7
+      const cappedCategoryCount = Math.min(categoryCount, 7);
+      const stateColor = colorMapping[cappedCategoryCount];
+      console.log("State " + stateId);
+      console.log(stateColor);
+  
+      // Apply the color to the state
+      $('#' + stateId).css('fill', stateColor);
+
+      // Handle Washington D.C. if necessary
+      if (stateId === 'WDC' || stateId === 'DC') {
+        $('#DC').css('fill', stateColor);
+      }
+    }
+  }
+// Step 3: Output the stateId and numberOfCategories
+//  for (const stateId in stateCategoryCounts) {
+//    if (stateCategoryCounts.hasOwnProperty(stateId)) {
+//      console.log(`${stateId}: ${stateCategoryCounts[stateId]}`);
+//    }
+ //}
+}
+
+
+
   // Adicionar o evento de clique ao botão de fechar
   document.getElementById('close-btn-ctg').addEventListener('click', closeFieldset);
-  // Function to update state colors based on selected categories
+  // Function to update state colors based on selecte/d categories
   function updateStateColors(selectedCategories) {
 
 
@@ -209,6 +267,11 @@ function selectNoCategories() {
     }
     if (selectedCategories == "States with No Laws") {
       selectNoCategories();
+      return ;
+    }
+
+    if (selectedCategories == "Intensity of Legislation") {
+      intensityOfLegislation();
       return ;
     }
 

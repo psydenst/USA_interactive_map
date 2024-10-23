@@ -126,6 +126,7 @@ path:hover, circle:hover {
   font-size: 1.2em;         /* Increases the font size */
   padding: 5px;             /* Adds some padding around the label */
   border-radius: 5px;       /* Rounds the corners for a nicer look */
+  color: #99D03D; !important
   transition: all 0.3s ease; /* Adds a smooth transition effect */
 }
 
