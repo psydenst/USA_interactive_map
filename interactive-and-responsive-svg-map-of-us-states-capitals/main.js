@@ -81,14 +81,14 @@ $(document).ready(function() {
   });
 
     const categoryColors = {
-      "States with No Laws" : "#E6CCFF",
-      "Privacy and Data Protection": "#800000", // Darker red
-      "Platform Accountability": "#006400", // Darker green
-      "Election MDM (Excluding AI)": "#808000", // Darker yellow
-      "AI-Generated Election Content": "#008080", // Darker cyanF6AE2F6AE2DD
-      "AI Laws (Excluding Elections)": "#876464" , // Black
-      "Cyberbullying and Harassment": "#38598b", // Darker blue
-      "Digital Literacy": "#ec729c" // Darker purple
+      "States with No Laws" : "#0d0e0f",
+      "Privacy and Data Protection": "#f6ae2d", // hunyadi yellow
+      "Platform Accountability": "#f08592", // salmon pink
+      "Election MDM (Excluding AI)": "#ea5cf7", // pink 
+      "AI-Generated Election Content": "#a99ce7", // indigo purple
+      "AI Laws (Excluding Elections)": "#67dbd7" , // Black
+      "Cyberbullying and Harassment": "#578e8d", // Darker blue
+      "Digital Literacy": "#55e07d" // Darker purple
     };
 
   // Function to log selected categories and update state colors
@@ -130,7 +130,7 @@ function selectAllCategories() {
   $('#CO').css('fill', 'url(#CO_gradient)'); // Apply the gradient
   $('#CT').css('fill', 'url(#CT_gradient)'); // Apply the gradient
   $('#DE').css('fill', 'url(#DE_gradient)'); // Apply the gradient
-  $('#DC').css('fill', '#38598b');
+  $('#DC').css('fill', '#578e8d');
   $('#FL').css('fill', 'url(#FL_gradient)'); // Apply the gradient
   $('#GA').css('fill', 'url(#GA_gradient)'); // Apply the gradient
   $('#HI').css('fill', 'url(#HI_gradient)'); // Apply the gradient
@@ -198,7 +198,7 @@ function selectNoCategories() {
 function intensityOfLegislation() {
 
   const colorMapping = {
-    0: '#E6CCFF', // Lightest purple
+    0: '#0d0e0f', // Lightest purple
     1: '#CC99FF',
     2: '#B266FF',
     3: '#9933FF',
