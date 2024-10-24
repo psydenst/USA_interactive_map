@@ -83,12 +83,12 @@ $(document).ready(function() {
     const categoryColors = {
       "States with No Laws" : "#E6CCFF",
       "Privacy and Data Protection": "#800000", // Darker red
-      "Transparency, Platform Accountability and Anti-Censorship": "#006400", // Darker green
-      "Election Misinformation (Excluding AI)": "#808000", // Darker yellow
-      "AI-Generated Election Content": "#008080", // Darker cyan
-      "AI Regulations (Excluding Elections)": "#876464" , // Black
-      "Cyberbullying, Defamation, and Harassment": "#38598b", // Darker blue
-      "Digital Literacy and Public Education": "#ec729c" // Darker purple
+      "Platform Accountability": "#006400", // Darker green
+      "Election MDM (Excluding AI)": "#808000", // Darker yellow
+      "AI-Generated Election Content": "#008080", // Darker cyanF6AE2F6AE2DD
+      "AI Laws (Excluding Elections)": "#876464" , // Black
+      "Cyberbullying and Harassment": "#38598b", // Darker blue
+      "Digital Literacy": "#ec729c" // Darker purple
     };
 
   // Function to log selected categories and update state colors
@@ -270,12 +270,12 @@ function intensityOfLegislation() {
       return ;
     }
 
-    if (selectedCategories == "Intensity of Legislation") {
+    if (selectedCategories == "Legislative Coverage") {
       intensityOfLegislation();
       return ;
     }
 
-    const hasCyber = selectedCategories.includes("Cyberbullying, Defamation, and Harassment");
+    const hasCyber = selectedCategories.includes("Cyberbullying and Harassment");
     
       for (const stateId in stateData) {
         if (stateData.hasOwnProperty(stateId)) {
