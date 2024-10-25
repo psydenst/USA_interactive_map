@@ -85,10 +85,10 @@ $(document).ready(function() {
       "Privacy and Data Protection": "#f6ae2d", // hunyadi yellow
       "Platform Accountability": "#f08592", // salmon pink
       "Election MDM (Excluding AI)": "#ea5cf7", // pink 
-      "AI-Generated Election Content": "#a99ce7", // indigo purple
+      "AI Laws (Elections)": "#a99ce7", // indigo purple
       "AI Laws (Excluding Elections)": "#67dbd7" , // Black
       "Cyberbullying and Harassment": "#578e8d", // Darker blue
-      "Digital Literacy": "#55e07d" // Darker purple
+      "Digital Literacy and Public Education": "#55e07d" // Darker purple
     };
 
   // Function to log selected categories and update state colors
@@ -245,12 +245,16 @@ function intensityOfLegislation() {
       }
     }
   }
-// Step 3: Output the stateId and numberOfCategories
-//  for (const stateId in stateCategoryCounts) {
-//    if (stateCategoryCounts.hasOwnProperty(stateId)) {
-//      console.log(`${stateId}: ${stateCategoryCounts[stateId]}`);
-//    }
- //}
+
+document.addEventListener('DOMContentLoaded', function() {
+
+
+  const statesWithAILaws = getStatesWithAILaws(stateData);
+  console.log("States with AI Laws enabled:");
+  statesWithAILaws.forEach(stateId => console.log(stateId));
+
+  // ... other functions and code
+});
 }
 
 
@@ -314,7 +318,7 @@ function intensityOfLegislation() {
     const categoryName = selectedRadio.next('label').text().trim();
 
     // Update the banner text and display it
-    $('#category-banner').text(`Selected: ${categoryName}`).fadeIn();
+ //   $('#category-banner').text(`${categoryName}`).fadeIn();
 
     // Proceed with your map coloration logic here
     // For example:
@@ -335,5 +339,10 @@ function intensityOfLegislation() {
     $('#ME').css('fill', 'url(#ME_gradient)'); // Apply the gradient
     $('#WY').css('fill', 'url(#WY_gradient)'); // Apply the gradient
   }
+  
+ getStatesWithAILaws(stateData);
+
 
 });
+
+

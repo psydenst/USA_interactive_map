@@ -80,12 +80,14 @@ path:hover, circle:hover {
 }
 
 #filter_cat {
-  position: absolute;
+  position: fixed;
   bottom: 6%;
   right: 1%;
-  background-color: rgba(0, 0, 0, 0.45);
+  background-color: #0d0e0f;
   height: 60vh;
-  width: 22vw;
+  width: 24vw;
+  min-width: 100px; !important;
+  min-height: auto;
   color: white;
   display: flex;
   flex-direction: column;
@@ -125,7 +127,7 @@ path:hover, circle:hover {
   font-size: 1.2em;         /* Increases the font size */
   padding: 5px;             /* Adds some padding around the label */
   border-radius: 5px;       /* Rounds the corners for a nicer look */
-  color: #99D03D; !important
+  color: #f26d4e; !important
   transition: all 0.3s ease; /* Adds a smooth transition effect */
 }
 

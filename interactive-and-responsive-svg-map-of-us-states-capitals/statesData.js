@@ -19,7 +19,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "HB 172 (Enacted May 2024)"
             },
@@ -34,7 +34,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -63,8 +63,8 @@ const stateData = {
                     "lawName": null
                 },
     {
-                    // AI-Generated Election Content
-                    "id": "AI-Generated Election Content",
+                    // AI Laws (Elections)
+                    "id": "AI Laws (Elections)",
                     "status": false,
                     "lawName": null
                 },
@@ -81,8 +81,8 @@ const stateData = {
                     "lawName": "Yes"
                 },
     {
-                    // Digital Literacy
-                    "id": "Digital Literacy",
+                    // Digital Literacy and Public Education
+                    "id": "Digital Literacy and Public Education",
                     "status": false,
                     "lawName": null
                 }
@@ -108,7 +108,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -123,7 +123,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -149,7 +149,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "S.B. 1359 and H.B. 2394"
             },
@@ -164,7 +164,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -190,7 +190,7 @@ const stateData = {
                 "lawName": "AB 2839 + California Code, Elections Code - ELEC \u00a7 18543"
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "AB 730 (Enacted Oct. 2019) AB 972 (Enacted Sept. 2022) AB 2355 (Enacted Sept. 2024) AB 2839 (Enacted Sept. 2024) AB 2655 (Enacted Sept. 2024)"
             },
@@ -205,7 +205,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": true,
                 "lawName": "Comprehensive Media Literacy Law"
             }
@@ -231,7 +231,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "HB 1147 (Enacted May 2024)"
             },
@@ -246,7 +246,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -272,7 +272,7 @@ const stateData = {
                 "lawName": "Conn. Gen. Stat. \u00a7 9-135"
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -287,7 +287,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": true,
                 "lawName": "a media literacy model curriculum for grades K-8 (later in 2023 included media literacy in social studies courses)"
             }
@@ -313,7 +313,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -328,7 +328,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": true,
                 "lawName": "Digital Citizenship Education Act"
             }
@@ -354,7 +354,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -369,7 +369,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -395,7 +395,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "HB 919 (Enacted April 2024)"
             },
@@ -410,7 +410,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": true,
                 "lawName": "Passed a law emphasizing digital wellness, requiring instruction on how social media manipulates information and the negative effects of misinformation."
             }
@@ -436,7 +436,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -451,7 +451,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -477,7 +477,7 @@ const stateData = {
                 "lawName": "(H.R.S. \u00a7 11-391) (2010)"
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "SB 2687 (Enacted July 2024)"
             },
@@ -492,7 +492,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -518,7 +518,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "HB 664 (Enacted Mar. 2024)"
             },
@@ -533,7 +533,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -559,7 +559,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -574,7 +574,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": true,
                 "lawName": "Media Literacy Instruction for High Schools"
             }
@@ -600,7 +600,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "HB 1133 (Enacted Mar. 2024)"
             },
@@ -615,7 +615,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -641,7 +641,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -656,7 +656,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -682,7 +682,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -697,7 +697,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -723,7 +723,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -738,7 +738,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -764,7 +764,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -779,7 +779,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -805,7 +805,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -820,7 +820,7 @@ const stateData = {
                 "lawName": "No"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -846,7 +846,7 @@ const stateData = {
                 "lawName": "Maryland Code, Election Law \u00a7 16-101"
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -861,7 +861,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -887,7 +887,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -902,7 +902,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -928,7 +928,7 @@ const stateData = {
                 "lawName": "MCL - Section 168.932f"
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "HB 5144 (Enacted Nov. 2023)"
             },
@@ -943,7 +943,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -969,7 +969,7 @@ const stateData = {
                 "lawName": "204C.035 DECEPTIVE PRACTICES IN ELECTIONS + Minnesota Statutes, chapters 204B; 211B "
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "HF 1370 (Enacted May 2023 and revised in 2024) HF 4772 (Enacted May 2024)"
             },
@@ -984,7 +984,7 @@ const stateData = {
                 "lawName": "No"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1010,7 +1010,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "SB 2577 (Enacted April 2024)"
             },
@@ -1025,7 +1025,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1051,7 +1051,7 @@ const stateData = {
                 "lawName": "115.631. Class one election offenses"
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1066,7 +1066,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1092,7 +1092,7 @@ const stateData = {
                 "lawName": "Incorrect Election Procedures Information 13-35-235"
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1107,7 +1107,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1133,7 +1133,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1148,7 +1148,7 @@ const stateData = {
                 "lawName": "No"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1174,7 +1174,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1189,7 +1189,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1215,7 +1215,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "HB 1596 (Enacted August 2024) HB 1432 (Enacted July 2024)"
             },
@@ -1230,7 +1230,7 @@ const stateData = {
                 "lawName": "No"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1256,7 +1256,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1271,7 +1271,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": true,
                 "lawName": "Media Literacy Instruction for K-12 Students"
             }
@@ -1297,7 +1297,7 @@ const stateData = {
                 "lawName": "N.M. Stat. \u00a7 1-20-9"
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "HB 182 (Enacted Mar. 2024)"
             },
@@ -1312,7 +1312,7 @@ const stateData = {
                 "lawName": "No"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": true,
                 "lawName": "require professional development in media literacy for teachers, expanding on a previous media literacy elective for high school graduation."
             }
@@ -1338,7 +1338,7 @@ const stateData = {
                 "lawName": "Assembly Bill A10357"
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "NY State Budget FY 2024-25 (Part MM Subpart B) (Enacted April 2024)"
             },
@@ -1353,7 +1353,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1379,7 +1379,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1394,7 +1394,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1420,7 +1420,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1435,7 +1435,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1461,7 +1461,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1476,7 +1476,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1502,7 +1502,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1517,7 +1517,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1543,7 +1543,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "SB 1571 (Enacted Mar. 2024)"
             },
@@ -1558,7 +1558,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1584,7 +1584,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1599,7 +1599,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1625,7 +1625,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1640,7 +1640,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1666,7 +1666,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1681,7 +1681,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1707,7 +1707,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1722,7 +1722,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1748,7 +1748,7 @@ const stateData = {
                 "lawName": "(Tenn. Code Ann. \u00a7 2-19- 133)"
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1763,7 +1763,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1789,7 +1789,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "SB 751 (Enacted June 2019)"
             },
@@ -1804,7 +1804,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": true,
                 "lawName": "Media Literacy and Misinformation Law"
             }
@@ -1830,7 +1830,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "SB 131 (Enacted Mar. 2024)"
             },
@@ -1845,7 +1845,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1871,7 +1871,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1886,7 +1886,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1912,7 +1912,7 @@ const stateData = {
                 "lawName": "\u00a7 24.2-1005.1. Communication of false information to registered voter"
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -1927,7 +1927,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1953,7 +1953,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "SB 5152 (Enacted May 2023)"
             },
@@ -1968,7 +1968,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -1994,7 +1994,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -2009,7 +2009,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -2035,7 +2035,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": true,
                 "lawName": "AB 664 (Enacted Mar. 2024)"
             },
@@ -2050,7 +2050,7 @@ const stateData = {
                 "lawName": "Yes"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
@@ -2076,7 +2076,7 @@ const stateData = {
                 "lawName": null
             },
             {
-                "id": "AI-Generated Election Content",
+                "id": "AI Laws (Elections)",
                 "status": false,
                 "lawName": null
             },
@@ -2091,7 +2091,7 @@ const stateData = {
                 "lawName": "No"
             },
             {
-                "id": "Digital Literacy",
+                "id": "Digital Literacy and Public Education",
                 "status": false,
                 "lawName": null
             }
