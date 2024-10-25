@@ -81,7 +81,7 @@ $(document).ready(function() {
   });
 
     const categoryColors = {
-      "States with No Laws" : "#0d0e0f",
+      "States with No MDM Laws" : "#0d0e0f",
       "Privacy and Data Protection": "#f6ae2d", // hunyadi yellow
       "Platform Accountability": "#f08592", // salmon pink
       "Election MDM (Excluding AI)": "#ea5cf7", // pink 
@@ -265,11 +265,11 @@ document.addEventListener('DOMContentLoaded', function() {
   function updateStateColors(selectedCategories) {
 
 
-    if (selectedCategories == "All Categories") {
+    if (selectedCategories == "All MDM Legislations") {
       selectAllCategories();
       return ;
     }
-    if (selectedCategories == "States with No Laws") {
+    if (selectedCategories == "States with No MDM Laws") {
       selectNoCategories();
       return ;
     }
@@ -318,7 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const categoryName = selectedRadio.next('label').text().trim();
 
     // Update the banner text and display it
- //   $('#category-banner').text(`${categoryName}`).fadeIn();
+    $('#category-banner').text(`${categoryName}`).fadeIn();
 
     // Proceed with your map coloration logic here
     // For example:

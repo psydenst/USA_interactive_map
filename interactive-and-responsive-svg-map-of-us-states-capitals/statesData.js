@@ -289,7 +289,7 @@ const stateData = {
             {
                 "id": "Digital Literacy and Public Education",
                 "status": true,
-                "lawName": "a media literacy model curriculum for grades K-8 (later in 2023 included media literacy in social studies courses)"
+                "lawName": "Public Act 17-67"
             }
         ]
     },
@@ -412,7 +412,7 @@ const stateData = {
             {
                 "id": "Digital Literacy and Public Education",
                 "status": true,
-                "lawName": "Passed a law emphasizing digital wellness, requiring instruction on how social media manipulates information and the negative effects of misinformation."
+                "lawName": "SB 52 + HB 361 (2022)"
             }
         ]
     },
@@ -1314,7 +1314,7 @@ const stateData = {
             {
                 "id": "Digital Literacy and Public Education",
                 "status": true,
-                "lawName": "require professional development in media literacy for teachers, expanding on a previous media literacy elective for high school graduation."
+                "lawName": "Digital Equity in Education Act"
             }
         ]
     },
