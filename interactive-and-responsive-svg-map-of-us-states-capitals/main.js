@@ -183,6 +183,48 @@ function selectNoCategories() {
   $('#WY').css('fill', 'url(#WY_gradient)'); // Apply the gradient
   }
 
+function selectNoCategories() {
+  $('.state').css('fill', '#D3D3D3'); // Applies to all elements with class "state"
+  $('#ME').css('fill', 'url(#ME_gradient)'); // Apply the gradient
+  $('#WY').css('fill', 'url(#WY_gradient)'); // Apply the gradient
+  }
+
+function selectElections() {
+    // Reset all states to light gray
+    $('.state').css('fill', '#D3D3D3');
+
+    // Loop through each state in stateData
+    for (const stateCode in stateData) {
+        const state = stateData[stateCode];
+        const categories = state.categories;
+
+        let isElectionMDMTrue = false;
+        let isAILawsElectionsTrue = false;
+
+        // Check each category for the state
+        for (const category of categories) {
+            if (category.id === "Election MDM (Excluding AI)" && category.status === true) {
+                isElectionMDMTrue = true;
+            }
+            if (category.id === "AI Laws (Elections)" && category.status === true) {
+                isAILawsElectionsTrue = true;
+            }
+        }
+
+        // Apply coloring logic
+        if (isElectionMDMTrue && !isAILawsElectionsTrue) {
+            // Only "Election MDM (Excluding AI)" is true
+            $('#' + stateCode).css('fill', '#ea5cf7');
+        } else if (!isElectionMDMTrue && isAILawsElectionsTrue) {
+            // Only "AI Laws (Elections)" is true
+            $('#' + stateCode).css('fill', '#a99ce7');
+        } else if (isElectionMDMTrue && isAILawsElectionsTrue) {
+            // Both are true
+            $('#' + stateCode).css('fill', 'url(#Elections_gradient)'); // A blended color for both
+        }
+        // States where neither category is true remain light gray
+    }
+}
 
 
   // Função para esconder o fieldset
@@ -198,7 +240,7 @@ function selectNoCategories() {
 function intensityOfLegislation() {
 
   const colorMapping = {
-    0: '#0d0e0f', // Lightest purple
+    0: '#E6CCFF', // Lightest purple
     1: '#CC99FF',
     2: '#B266FF',
     3: '#9933FF',
@@ -246,18 +288,8 @@ function intensityOfLegislation() {
     }
   }
 
-document.addEventListener('DOMContentLoaded', function() {
 
-
-  const statesWithAILaws = getStatesWithAILaws(stateData);
-  console.log("States with AI Laws enabled:");
-  statesWithAILaws.forEach(stateId => console.log(stateId));
-
-  // ... other functions and code
-});
 }
-
-
 
   // Adicionar o evento de clique ao botão de fechar
   document.getElementById('close-btn-ctg').addEventListener('click', closeFieldset);
@@ -271,6 +303,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     if (selectedCategories == "States with No MDM Laws") {
       selectNoCategories();
+      return ;
+    }
+    if (selectedCategories == "Election MDM (AI and Non-AI)") {
+      selectElections();
       return ;
     }
 
@@ -307,29 +343,40 @@ document.addEventListener('DOMContentLoaded', function() {
   // Initial log and color assignment on page load
   updateSelectedCategories();
 
-  // Event listener for checkbox state changes
-  $('#filter_cat input[type=radio]').on('click', function() {
+const fullName = {
+    "Platform Accountability": 'Transparency, Platform Accountability, and Anti-Censorship',
+    "Cyberbullying and Harassment": 'Cyberbullying, Defamation, and Harassment'
+};
 
-  const selectedRadio = $('#filter_cat input[type=radio]:checked');
+// Event listener for radio button state changes
+$('#filter_cat input[type=radio]').on('click', function() {
 
-  // Check if any radio button is selected
-  if (selectedRadio.length > 0) {
-    // Retrieve the text of the corresponding label
-    const categoryName = selectedRadio.next('label').text().trim();
+    const selectedRadio = $('#filter_cat input[type=radio]:checked');
 
-    // Update the banner text and display it
-    $('#category-banner').text(`${categoryName}`).fadeIn();
+    // Check if any radio button is selected
+    if (selectedRadio.length > 0) {
+        // Retrieve the text of the corresponding label
+        const categoryName = selectedRadio.next('label').text().trim();
 
-    // Proceed with your map coloration logic here
-    // For example:
-    // colorMapBasedOnCategory(selectedRadio.val());
-  } else {
-    // Hide the banner if no category is selected
-    $('#category-banner').fadeOut();
-  }
-    // add here the banner function call
+        // Use the full name if it exists in the fullName object
+        const displayName = fullName[categoryName] || categoryName;
+
+        // Update the banner text and display it
+        $('#category-banner').text(displayName).fadeIn();
+
+        // Proceed with your map coloration logic here
+        // For example:
+        // colorMapBasedOnCategory(selectedRadio.val());
+
+    } else {
+        // Hide the banner if no category is selected
+        $('#category-banner').fadeOut();
+    }
+
+    // Add here the banner function call
     updateSelectedCategories();
-  });
+});
+
 
   document.querySelector('label[for="0"]').addEventListener('click', function() {
     noLaws();
