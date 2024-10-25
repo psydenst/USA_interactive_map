@@ -71,7 +71,6 @@ $(document).ready(function() {
   // Handle click events on states to display information
   $('.state').on('click', function() {
     const stateId = $(this).attr('id'); // Get the ID of the clicked state
-    console.log(`State clicked: ${stateId}`);
     displayStateInfo(stateId); // Call the function to display info
   });
 
@@ -220,7 +219,12 @@ function selectElections() {
             $('#' + stateCode).css('fill', '#a99ce7');
         } else if (isElectionMDMTrue && isAILawsElectionsTrue) {
             // Both are true
-            $('#' + stateCode).css('fill', 'url(#Elections_gradient)'); // A blended color for both
+            if (stateCode == 'MI')
+            {
+              $('#' + stateCode).css('fill', 'url(#MI_Elections_gradient)'); // A blended color for both
+            }
+            else
+              $('#' + stateCode).css('fill', 'url(#Elections_gradient)'); // A blended color for both
         }
         // States where neither category is true remain light gray
     }
@@ -275,8 +279,6 @@ function intensityOfLegislation() {
       // Ensure the category count doesn't exceed 7
       const cappedCategoryCount = Math.min(categoryCount, 7);
       const stateColor = colorMapping[cappedCategoryCount];
-      console.log("State " + stateId);
-      console.log(stateColor);
   
       // Apply the color to the state
       $('#' + stateId).css('fill', stateColor);
@@ -378,6 +380,7 @@ $('#filter_cat input[type=radio]').on('click', function() {
 });
 
 
+ 
   document.querySelector('label[for="0"]').addEventListener('click', function() {
     noLaws();
   });

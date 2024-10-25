@@ -17,6 +17,16 @@
           <stop offset="50%" stop-color="#a99ce7" stop-opacity="1" /> <!--  "AI Laws (Excluding Elections)" --> 
           <stop offset="100%" stop-color="#a99ce7" stop-opacity="1" /> <!-- "AI Laws (Excluding Elections)" --> 
         </linearGradient>
+        <linearGradient id="MI_Elections_gradient"  x1="0" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#ea5cf7" stop-opacity="1" /> <!-- AI Laws (Elections) -->
+          <stop offset="30%" stop-color="#ea5cf7" stop-opacity="1" /> <!-- AI Laws (Elections) -->
+          <stop offset="30%" stop-color="#a99ce7" stop-opacity="1" /> <!--  "AI Laws (Excluding Elections)" --> 
+          <stop offset="52%" stop-color="#a99ce7" stop-opacity="1" /> <!-- "AI Laws (Excluding Elections)" --> 
+          <stop offset="52%" stop-color="#ea5cf7" stop-opacity="1" /> <!--  "AI Laws (Excluding Elections)" --> 
+          <stop offset="72%" stop-color="#ea5cf7" stop-opacity="1" /> <!-- "AI Laws (Excluding Elections)" -->
+          <stop offset="72%" stop-color="#a99ce7" stop-opacity="1" /> <!-- AI Laws (Elections) -->
+          <stop offset="100%" stop-color="#a99ce7" stop-opacity="1" /> <!-- AI Laws (Elections) -->
+        </linearGradient>
 
         <linearGradient id="AL_gradient"  x1="0" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stop-color="#a99ce7" stop-opacity="1" /> <!-- AI Laws (Elections) -->
@@ -594,7 +604,10 @@
 
       <div>
         <button id="close-btn-ctg" style="font-size: 1.2vw; color: #f26d4e; !important"><b>X</b></button>
-        <legend class="text-center" style="font-size: 1.7vw; margin-top: 1vh; color: #f26d4e; !important"><b>MDM Regulation</b></legend>
+        <div id="index_title" class="d-flex flex-row">
+          <legend class="text-center" style="font-size: 1.7vw; margin-top: 1vh; color: #f26d4e; !important"><b>MDM Regulation</b></legend>
+          <span class="d-flex justify-content-end color-square ml-1 mr-3 mb-1" style="background-color: rgba(0,0,0,0);"></span>
+        </div>
       </div>
 
       <div class="w-100 d-flex categorie">
@@ -733,8 +746,6 @@
 
 // Example usage with your stateData
 const statesWithAILaws = getStatesWithAILaws(stateData);
-console.log("States with AI Laws enabled:");
-statesWithAILaws.forEach(stateId => console.log(stateId));
 
 </script>
 

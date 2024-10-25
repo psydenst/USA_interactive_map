@@ -84,15 +84,17 @@ path:hover, circle:hover {
   bottom: 6%;
   right: 1%;
   background-color: #0d0e0f;
-  height: 60vh;
-  width: 24vw;
-  min-width: 100px; !important;
-  min-height: auto;
+  min-height: 400px !important;
+  max-height: 60vh; /* Set the maximum height */
+  min-width: 332px !important;
+  max-width: 24vw; /* Set the maximum width */
+  width: 100%; /* Allow width to be responsive */
+  height: auto; /* Allow height to be determined by content */
   color: white;
   display: flex;
   flex-direction: column;
-  overflow-y: auto; /* Add this line to enable vertical scrolling */
-  overflow-x: hidden; /* Add this line to enable vertical scrolling */
+  overflow-y: auto;
+  overflow-x: hidden;
   margin-left: 1vw;
 }
 
@@ -158,7 +160,7 @@ path:hover, circle:hover {
 #close-btn-ctg {
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 12.5px;
     background: none;
     border: none;
     color: white;
